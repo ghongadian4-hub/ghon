@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person Info System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+   
+   
+    <div class="sidebar">
+     <h2></h2>
+     <button onclick="showPanel('home')">Home</button>
+     <button onclick="showPanel('contact')">Contact</button>
+     <button onclick="showPanel('about')">About</button>
+     <button onclick="showPanel('help')">Help</button>
+     <button class="exit-btn" onclick="exitSystem()">Exit</button>
+    </div>
+   
+   
+   
+   
+
+    <div class="main-content">
+        <div id="home" class="panel">
+            <h1>Personal Information </h1>
+            
+            <div class="form-container">
+                <input type="text" id="fName" placeholder="First Name">
+                <input type="text" id="mName" placeholder="Middle Name">
+                <input type="text" id="lName" placeholder="Last Name">
+                <input type="number" id="age" placeholder="Age">
+                <input type="email" id="gmail" placeholder="Gmail Address">
+                <button onclick="registerPerson()">Add to Dashboard</button>
+            </div>
+
+            <table id="personTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <div id="contact" class="panel" style="display:none;"><h1>Contact Us</h1><p>Email:ghonfajardogadian@gmail.com</p></div>
+        <div id="about" class="panel" style="display:none;"><h1>About</h1><p></p></div>
+        <div id="help" class="panel" style="display:none;"><h1>Help</h1><p>ME</p></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
